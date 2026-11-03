@@ -44,6 +44,11 @@ def prepare():
     layer = A.mano_layer()
     part_of_v = layer.th_weights.numpy().argmax(1)
     distal = {f: np.where(part_of_v == DISTAL_PART[f])[0] for f in D.FINGERS}
+    learned = {}                      # C-learned: fingers whose HACO pad-contact probability > 0.5
+    if os.environ.get("HACO_CONTACT"):
+        for r in json.load(open(os.environ["HACO_CONTACT"])):
+            if r['p_learned'] > 0.5:
+                learned.setdefault(r['image'], []).append(r['finger'])
     by_img = {}
     for r in labels:
         by_img.setdefault(r['image'], []).append(r)
@@ -62,7 +67,8 @@ def prepare():
             Vh=pred['v_b2'][i] - pred['t_b2'][i], Jh=pred['j_b2'][i] - pred['t_b2'][i], t0=pred['t_b2'][i],
             uv=pred['kp2d_full'][i], vis=vis, occ=occ,
             proxy=[f for f in D.FINGERS if occ[f] == 'object'],
-            oracle=[f for r in rs for f in [r['finger']] if r['gt_contact_3mm']]))
+            oracle=[f for r in rs for f in [r['finger']] if r['gt_contact_3mm']],
+            learned=learned.get(img, [])))
     return items, samplers, distal, labels, pred, idx
 
 
@@ -89,7 +95,7 @@ def cost(t, item, variant, wc, wp):
     uv = pj[:, :2] / pj[:, 2:]
     c2d = np.mean(np.sum((uv - item['uv'][item['vis']]) ** 2, axis=1)) / SIG_PX ** 2
     sd = signed(item, V)
-    fingers = item['proxy'] if variant == 'proxy' else item['oracle'] if variant == 'oracle' else []
+    fingers = item.get(variant, []) if variant != 'none' else []
     if fingers:
         c = np.mean([np.abs(sd[_G['distal'][f]]).min() for f in fingers])
     else:

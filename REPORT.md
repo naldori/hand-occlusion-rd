@@ -25,9 +25,12 @@ sim2real2sim 파이프라인의 입력이 된다. 그 용도에서는 손가락 
    HO-Cap 손목 깊이 오차가 Hamba 57%, WiLoR 50% 줄었다. 접촉 정보가 전혀 없으면 기준(30%)에 못 미쳤다.
 5. 위 결론은 Hamba와 WiLoR에서 같게 나와 **HaMeR 계열(ViT + MANO 회귀 + 고정 초점거리) 공통 특성**으로 본다.
    즉 Hamba 디코더만 손봐서는 해결되지 않는 구조적 문제다.
+6. **정답 가림 라벨은 공개 학습형 접촉 예측기로 대체된다(C-learned, 12절).** HACO(NeurIPS 2025)의 MANO 정점별 접촉으로 "당길 손가락"을 정하면
+   HO-Cap 손목 깊이 오차가 Hamba 57%, WiLoR 50% 줄어 정답 라벨을 쓴 경우와 같다(차이 +0.3~0.6%p). 이 접촉을 쓴 기하 점수는 배포 조건에서
+   손 전체 위치 오류를 잘 걸러내지만(AUROC 0.79–0.84), 손 위치를 맞춘 뒤의 손가락 단위 오류 검출은 기준에 근소하게 못 미친다(하한 0.56–0.59).
 
-**다음 작업(우선순위).** (1) 사람별 손 크기 1회 보정 + 물체 기준 미터 깊이 보정 모듈, (2) 손가락별 접촉 예측 헤드,
-(3) 접촉을 이용한 가린 손가락 후보 선택, (4) 같은 진단을 human-object(SMPL 형상) 쪽으로 확장. 상세는 13절.
+**다음 작업(우선순위).** (1) 사람별 손 크기 1회 보정 + 물체 기준 미터 깊이 보정 모듈(학습형 접촉 사용 가능 확인), (2) 손가락 단위 접촉 정밀도 개선
+(HACO는 손가락 93%를 접촉으로 판정), (3) 접촉을 이용한 가린 손가락 후보 선택, (4) 같은 진단을 human-object(SMPL 형상) 쪽으로 확장. 상세는 14절.
 
 ---
 
@@ -40,7 +43,7 @@ sim2real2sim 파이프라인의 입력이 된다. 그 용도에서는 손가락 
   2. 물리·기하 타당성 모듈 — 복원된 손과 물체로 (a) 힘 평형 가능 여부, (b) 관통·떠 있음을 계산해 오류 손가락을 찾고 고치는 후처리.
      시뮬레이터 없이 수 ms 수준이라 실시간 파이프라인에 붙이기 쉽다는 것이 장점.
 - **운영 원칙**: go/no-go 기준은 실행 전에 PROTOCOL.md에 고정하고 결과를 보고 바꾸지 않는다. 기준을 못 넘은 결과도 그대로 기록한다.
-  도중에 발견한 구현 문제와 설계 변경은 이유와 함께 남긴다(15절).
+  도중에 발견한 구현 문제와 설계 변경은 이유와 함께 남긴다(16절).
 
 ## 2. 진행 단계
 
@@ -54,6 +57,7 @@ sim2real2sim 파이프라인의 입력이 된다. 그 용도에서는 손가락 
 | 5 | 진단 1 | 큰 오류 손가락이 왜 물체에서 멀리 있나 | 같은 데이터 | 실사용 오차 = 손 전체 깊이 |
 | 6 | 진단 2 | "떠 있음"·깊이 오차의 원인, 물체로 보정 | 같은 데이터 | 평균 손 크기 가정, 대리 접촉 보정 −57% |
 | 7 | 교차 확인 | 계열 공통인가 | WiLoR, 같은 데이터 | 세 결론 모두 재현 |
+| 8 | C-learned | 정답 라벨 대신 학습형 접촉(HACO)으로 보정·검출이 되는가 | 같은 데이터, Hamba + WiLoR | 보정 go(−50~57%), 손가락 단위 검출은 근소 미달 |
 
 ---
 
@@ -209,9 +213,37 @@ WiLoR(학습 14종에 DexYCB 포함, HO-Cap 미포함), 같은 crop·정렬·점
 - 평균 손 크기 가정: WiLoR도 동일(범위는 더 좁음). 학습에서 본 피험자는 정확.
 - 배포용 기하 점수로 탐지 불가: 동일. 가림 라벨 + 물체로 깊이 보정: 깊이 오차가 클 때 동일하게 작동, 오차가 이미 작으면 효과 없음.
 
+## 12. 정답 라벨 제거 — 학습형 접촉 예측(C-learned)
+지금까지의 물체 기반 보정(C)은 정답에서 만든 가림 라벨(C-proxy)이나 정답 접촉(C-oracle)을 썼다. 이를 공개 학습형 접촉 예측기 출력으로 바꿨다.
+기준은 실행 전에 PROTOCOL.md "C-learned"에 고정했고, 상세는 `results/c_learned/README.md`.
+
+**예측기 선택.** 공식 가중치 > 단일 이미지 입력 > MANO 정점 출력 > HO-Cap 미포함 순으로 후보(HACO, HOPE, Vid-HACO, ContactPrompt, CONTHO, DECO 등)를
+비교해 네 조건을 모두 만족하는 **HACO**(Jung & Lee, NeurIPS 2025; 공식 코드·ViT-H 체크포인트, CC BY-NC 4.0)를 택했다. 학습 데이터 14종에 DexYCB는 포함,
+HO-Cap은 미포함 → 판정은 HO-Cap. HOPE·Vid-HACO는 영상 입력, CONTHO·DECO는 몸(SMPL) 접촉이라 제외.
+
+**설정.** 입력은 기존과 같은 정답 bbox(공식 데모처럼 2.0배 확대, 256×256). 손가락 접촉 확률 = 끝마디 손바닥 쪽(패드) 정점 19–23개의 확률 최댓값,
+판정 > 0.5. 보정 비용·가중치(w_c=10, w_p=1)는 기존 C 그대로, "당길 손가락"만 HACO 판정으로 바꿈.
+
+| 항목 (HO-Cap) | Hamba | WiLoR |
+|---|---|---|
+| 손가락 접촉 AUROC: HACO vs 대리 규칙("물체에 가림 = 접촉") | 0.74 [0.68, 0.80] vs 0.63 | (이미지 기반, 공통) |
+| 손목 깊이 B2 → C-proxy / **C-learned** / C-oracle | 53.0 → 23.0 / **22.7** / 23.8mm | 44.0 → 22.0 / **21.9** / — mm |
+| C-learned 감소율 | **−57% [45, 67]** | **−50% [35, 59]** |
+| C-learned − C-proxy 감소율 | +0.6%p [−1.8, +4.9] | +0.3%p [−3.0, +4.4] |
+| 보이는 손끝 오차 C-proxy / C-learned | 34.4 / 39.7mm | 35.6 / 39.2mm |
+| S_geo-learned AUROC (물체 가림 큰 오류) B1 / B2 / 보정 후 | 0.63 [0.59, 0.66] / 0.84 / 0.65 [0.62, 0.69] | 0.60 [0.56, 0.64] / 0.79 / 0.63 [0.60, 0.65] |
+| 판정 1 깊이 보정 / 2 라벨 대체 / 3 검출 | go / go / 형식상 go | go / go / 형식상 go |
+
+- HACO는 확률 순위는 좋지만(AUROC 0.74) 임계값 0.5에서 **손가락의 93%를 접촉으로 판정**한다(재현율 0.97). 그래서 C-learned는 사실상
+  "손 전체를 물체에 붙이는" 보정에 가깝고 보이는 손끝은 C-proxy보다 약간 나쁘다.
+- 판정 3의 높은 B2 AUROC는 물체 가림 손가락의 91–94%가 이미 큰 오류(주원인 = 손 전체 깊이)인 상황에서 손 전체 위치 오류를 잡은 것이다.
+  손 위치를 정답에 맞춘 B1의 손가락 단위 검출은 두 모델 모두 하한 0.56–0.59로 기준에 근소하게 못 미쳤다.
+- DexYCB(HACO·추정기 모두 본 데이터, 참고): Hamba C-learned −40%(C-proxy −16%), WiLoR C-learned −18%(C-proxy는 악화).
+- 사후 변형 C*(관통 5mm 허용): HO-Cap C-learned −46%, C-proxy −45%로 역시 동등.
+
 ---
 
-## 12. 로드맵에 주는 시사점
+## 13. 로드맵에 주는 시사점
 
 **범용 손 자세 추정기 (Hamba 개선)**
 - 현재 병목은 손가락 국소 자세보다 **미터 스케일**이다. 배포 조건 손끝 오차(48–57mm)의 81–92%가 손 전체 평행이동으로 설명된다.
@@ -223,6 +255,8 @@ WiLoR(학습 14종에 DexYCB 포함, HO-Cap 미포함), 같은 crop·정렬·점
 - 물체는 미터 기준으로 쓸 수 있다(손목 깊이 −50~57%). 물체 자세 추정기(6D)와 결합한 joint refinement가 다음 통합 지점이다.
 - 빠진 부품은 **손가락별 접촉 예측**이다: 접촉을 알면 기하 점수가 0.3–0.4 AUROC 오른다. 가려진 손가락 오류는 물체 바깥 법선 방향으로
   나타나므로, 접촉 + 비관통 제약으로 후보를 고르는 방식이 맞는다.
+- 공개 학습형 접촉 예측기(HACO)만으로도 물체 기반 미터 보정은 정답 라벨 없이 동작한다(12절). 남은 과제는 손가락 단위 접촉 **정밀도**
+  (현재 손가락 93%를 접촉으로 판정)이며, 이것이 가린 손가락 국소 오류 검출·보정의 병목이다.
 - 힘 평형 기반 타당성 필터는 접촉이 많은 실제 파지에서 정보가 없어 채택하지 않는다.
 
 **Human-object pose estimation**
@@ -234,26 +268,27 @@ WiLoR(학습 14종에 DexYCB 포함, HO-Cap 미포함), 같은 crop·정렬·점
   StableGrasp 사례처럼 "물리적으로 그럴듯하게" 맞추는 것만으로는 정확도가 보장되지 않는다.
 - 필요한 것은 (1) 사람별 미터 스케일 보정, (2) 물체 기준 접촉 일관성, (3) 정답 주석의 관통을 허용하는 비용 설계(정답 데이터에도 수 mm 관통이 있다).
 
-## 13. 다음 작업 (우선순위)
+## 14. 다음 작업 (우선순위)
 | 순위 | 작업 | 근거 | 성공 기준(초안) |
 |---|---|---|---|
-| 1 | 사람별 손 크기 1회 보정 + 물체 기준 평행이동 보정 모듈 | 평균 손 크기 가정, 대리 접촉 보정 −50~57% | 새 피험자 3명 이상에서 손목 깊이 오차 30%↓, CI∌0 |
+| 1 | 사람별 손 크기 1회 보정 + 물체 기준 평행이동 보정 모듈 (접촉은 HACO 사용) | 평균 손 크기 가정, 대리·학습형 접촉 보정 −50~57% | 새 피험자 3명 이상에서 손목 깊이 오차 30%↓, CI∌0 |
 | 2 | 관통 허용 비용 함수 고정 후 재검증 | 사전 비용이 정답 손 단위 테스트 실패, C*는 통과 | 단위 테스트 C-oracle 중앙값 <5mm를 사전 조건으로 |
-| 3 | 손가락별 접촉 예측 헤드 | oracle과 배포용 점수의 차이 0.3–0.4 AUROC | 접촉 예측으로 S_geo AUROC CI 하한 > 0.6 |
+| 3 | 손가락 단위 접촉 정밀도 개선 (임계값·보정 또는 접촉 헤드 미세조정) | HACO AUROC 0.74이나 손가락 93%를 접촉 판정, B1 손가락 검출 하한 0.56–0.59 | 손 위치 정렬(B1) S_geo-learned AUROC CI 하한 > 0.6 |
 | 4 | 접촉·비관통 기반 가린 손가락 후보 선택 | 오차가 물체 바깥 법선 방향 | 가린 손가락 손끝 오차 중앙값 감소, CI∌0 |
 | 5 | 진단 파이프라인을 human-object(SMPL)로 확장 | 같은 스케일 모호성 | 형상 크기 편향 유무 확인 |
 | 보류 | GCN 토폴로지 변경 | 가중치 재배치·손실 재구현 필요, 주원인 아님 | 1–3 이후 재평가 |
 
-## 14. 한계
+## 15. 한계
 - 데이터셋당 피험자 1명(DexYCB subject-01, HO-Cap subject_5), 시퀀스/에피소드 10–12개 → 신뢰구간이 넓고,
   데이터셋·사람·본/안 본 데이터 차이를 완전히 분리할 수 없다.
 - 물체 자세·메시는 정답 사용(상한). 가림 라벨도 정답 메시에서 얻었고 C-proxy가 이를 사용.
 - DexYCB는 두 모델 모두 학습에서 본 데이터. HO-Cap 시퀀스 3개 중 2개는 양손.
 - 손끝 = MANO 표준 손끝 정점(손가락 맨 끝)이라 실제 접촉점(손가락 바닥)과 다름.
 - 질량·마찰은 가정값, 관절 토크(τ = Jᵀf) 검사는 하지 않음. 탐지 성능과 깊이 보정만 평가했고 손가락 단위 보정 효과는 일부만 확인.
-- 진단 1·2와 WiLoR 교차 확인은 사후 분석이며 H1 결론을 바꾸지 않는다.
+- 진단 1·2, WiLoR 교차 확인, C-learned는 사후 분석이며 H1 결론을 바꾸지 않는다.
+- C-learned: 2D 항의 "보이는 관절"은 여전히 정답 가림 라벨에서 옴(모든 변형 공통). HACO 백본은 HaMeR 초기화라 HaMeR 계열 추정기와 오류가 상관될 수 있음.
 
-## 15. 구현 이슈와 처리 이력
+## 16. 구현 이슈와 처리 이력
 | 시점 | 문제 | 처리 |
 |---|---|---|
 | 단계 A | smplx PCA 경로가 DexYCB 관절과 115mm 불일치 | manopth로 교체(0.0mm), 해석 전 수정 |
@@ -264,7 +299,7 @@ WiLoR(학습 14종에 DexYCB 포함, HO-Cap 미포함), 같은 crop·정렬·점
 | 진단 2 C | 최적화용 부호 거리의 부호 버그(관통 합 15–80배 과대) | 정답 손 단위 테스트로 발견, 수정 후 가중치 탐색 재실행, 1차 결과 폐기 |
 | 진단 2 C | 사전 고정 비용이 정답 손도 회복 못 함 | 평가는 사전 비용으로, 관통 허용 변형 C*는 사후 분석으로만 보고 |
 
-## 16. 재현
+## 17. 재현
 `README.md`의 "재현 방법" 참고. 핵심 명령:
 ```
 # 단계 A (CPU 분석 환경)
@@ -280,10 +315,17 @@ DIAG_SET=stage_b_hocap python -I diagnostics2_ab.py
 DIAG_SET=stage_b C_MODE=grid python -I diagnostics2_c.py ; DIAG_SET=stage_b_hocap C_MODE=apply python -I diagnostics2_c.py
 # WiLoR (cwd = WiLoR 저장소)
 PILOT_SET=stage_b_hocap $HAND_PILOT_ROOT/wilor_env/bin/python wilor_infer.py ; python -I wilor_compare.py
+# C-learned (HACO 추론은 cwd = HACO 저장소, haco_env)
+PILOT_SET=stage_b_hocap $HAND_PILOT_ROOT/haco_env/bin/python haco_infer.py
+python -I c_learned_stage1.py
+DIAG_SET=stage_b_hocap C_MODE=apply C_VARIANTS=proxy,learned HACO_CONTACT=$HAND_PILOT_ROOT/results/c_learned/stage_b_hocap/finger_contact.json \
+  C_OUT=$HAND_PILOT_ROOT/results/c_learned/c_main C_WEIGHTS=$HAND_PILOT_ROOT/results/c_learned/c_weights_main.json python -I diagnostics2_c.py
+python -I c_learned_stage2.py ; python -I c_learned_detect.py ; python -I c_learned_figures.py
 ```
 모든 실행은 `PYTHONNOUSERSITE=1`로 사용자 영역 site-packages를 차단했다.
 
-## 17. 참고 자료
+## 18. 참고 자료
 Hamba (arXiv 2407.09646) · WiLoR (arXiv 2409.12259) · VPHO (arXiv 2511.12030) · Pham et al. TPAMI 2018 · EasyHOI (CVPR 2025) ·
 DeepSimHO (NeurIPS 2023) · StableGrasp (arXiv 2610.09195) · Stability-driven contact reconstruction (CVPR 2022) ·
+HACO (arXiv 2505.11152, github.com/dqj5182/HACO_RELEASE) · HOPE (arXiv 2608.06192) ·
 DexYCB (dex-ycb.github.io) · HO-Cap (irvlutd.github.io/HOCap) · MANO (mano.is.tue.mpg.de)

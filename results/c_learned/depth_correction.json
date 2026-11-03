@@ -1,0 +1,848 @@
+{
+ "main_preregistered": {
+  "stage_b_hocap": {
+   "B2": {
+    "wrist_depth_mm": {
+     "value": 53.0147,
+     "ci95": [
+      45.3958,
+      61.3175
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 52.2292,
+     "ci95": [
+      43.5316,
+      60.4443
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 60.5054,
+     "ci95": [
+      49.7379,
+      71.6024
+     ],
+     "n": 7000
+    }
+   },
+   "C-none": {
+    "wrist_depth_mm": {
+     "value": 44.5536,
+     "ci95": [
+      37.383,
+      49.9146
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.1596,
+     "ci95": [
+      -0.0006,
+      0.3358
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -8.4612,
+     "ci95": [
+      -19.9069,
+      0.0297
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 46.4455,
+     "ci95": [
+      42.0816,
+      54.0604
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 50.9059,
+     "ci95": [
+      46.0279,
+      56.3647
+     ],
+     "n": 7000
+    }
+   },
+   "C-proxy": {
+    "wrist_depth_mm": {
+     "value": 23.0178,
+     "ci95": [
+      19.4888,
+      27.9511
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.5658,
+     "ci95": [
+      0.4342,
+      0.6596
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -29.9969,
+     "ci95": [
+      -39.6616,
+      -20.3143
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 34.4097,
+     "ci95": [
+      30.1862,
+      40.6286
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 34.8508,
+     "ci95": [
+      29.3093,
+      40.701
+     ],
+     "n": 7000
+    }
+   },
+   "C-learned": {
+    "wrist_depth_mm": {
+     "value": 22.6902,
+     "ci95": [
+      18.9919,
+      26.3468
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.572,
+     "ci95": [
+      0.4519,
+      0.6684
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -30.3245,
+     "ci95": [
+      -40.2474,
+      -20.9563
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 39.7119,
+     "ci95": [
+      31.625,
+      44.8714
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 34.6972,
+     "ci95": [
+      29.3952,
+      40.1749
+     ],
+     "n": 7000
+    }
+   },
+   "C-oracle": {
+    "wrist_depth_mm": {
+     "value": 23.8419,
+     "ci95": [
+      20.8794,
+      27.7167
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.5503,
+     "ci95": [
+      0.4413,
+      0.6336
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -29.1728,
+     "ci95": [
+      -37.9445,
+      -20.4587
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 33.0996,
+     "ci95": [
+      28.22,
+      40.8834
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 34.2582,
+     "ci95": [
+      28.9566,
+      39.6976
+     ],
+     "n": 7000
+    }
+   },
+   "learned_minus_proxy_reduction": {
+    "value": 0.0062,
+    "ci95": [
+     -0.0183,
+     0.0492
+    ],
+    "n": 7000
+   },
+   "criterion1_learned_depth_correction": {
+    "reduction": {
+     "value": 0.572,
+     "ci95": [
+      0.4519,
+      0.6684
+     ],
+     "n": 7000
+    },
+    "change_ci": [
+     -40.2474,
+     -20.9563
+    ],
+    "met": true
+   },
+   "criterion2_replaces_gt_occlusion_labels": {
+    "diff": {
+     "value": 0.0062,
+     "ci95": [
+      -0.0183,
+      0.0492
+     ],
+     "n": 7000
+    },
+    "met": true
+   }
+  },
+  "stage_b": {
+   "B2": {
+    "wrist_depth_mm": {
+     "value": 14.8262,
+     "ci95": [
+      10.5436,
+      20.0708
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 16.4182,
+     "ci95": [
+      12.494,
+      20.0192
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 19.8071,
+     "ci95": [
+      15.7053,
+      23.1684
+     ],
+     "n": 2280
+    }
+   },
+   "C-none": {
+    "wrist_depth_mm": {
+     "value": 15.4851,
+     "ci95": [
+      10.6523,
+      20.6724
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": -0.0444,
+     "ci95": [
+      -0.7487,
+      0.3176
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": 0.6589,
+     "ci95": [
+      -5.4002,
+      7.9977
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 20.4339,
+     "ci95": [
+      13.5701,
+      27.6644
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 28.0455,
+     "ci95": [
+      20.8042,
+      32.6436
+     ],
+     "n": 2280
+    }
+   },
+   "C-proxy": {
+    "wrist_depth_mm": {
+     "value": 12.471,
+     "ci95": [
+      8.9795,
+      16.217
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.1589,
+     "ci95": [
+      -0.1583,
+      0.4061
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -2.3552,
+     "ci95": [
+      -7.0823,
+      1.8841
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 19.2252,
+     "ci95": [
+      12.9208,
+      26.0351
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 24.6411,
+     "ci95": [
+      17.5241,
+      30.1423
+     ],
+     "n": 2280
+    }
+   },
+   "C-learned": {
+    "wrist_depth_mm": {
+     "value": 8.884,
+     "ci95": [
+      7.5698,
+      11.6464
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.4008,
+     "ci95": [
+      0.2169,
+      0.5059
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -5.9422,
+     "ci95": [
+      -9.5129,
+      -2.3115
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 15.7296,
+     "ci95": [
+      12.448,
+      21.5547
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 20.9721,
+     "ci95": [
+      16.8812,
+      27.6297
+     ],
+     "n": 2280
+    }
+   },
+   "C-oracle": {
+    "wrist_depth_mm": {
+     "value": 9.7564,
+     "ci95": [
+      7.942,
+      13.8468
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.3419,
+     "ci95": [
+      0.0687,
+      0.5056
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -5.0698,
+     "ci95": [
+      -9.2973,
+      -0.7246
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 15.6024,
+     "ci95": [
+      10.3926,
+      22.7665
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 21.2127,
+     "ci95": [
+      15.8286,
+      27.8193
+     ],
+     "n": 2280
+    }
+   },
+   "learned_minus_proxy_reduction": {
+    "value": 0.2419,
+    "ci95": [
+     0.0634,
+     0.4404
+    ],
+    "n": 2280
+   }
+  }
+ },
+ "C*_posthoc_pen_tol_5mm": {
+  "stage_b_hocap": {
+   "B2": {
+    "wrist_depth_mm": {
+     "value": 53.0147,
+     "ci95": [
+      45.3958,
+      61.3175
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 52.2292,
+     "ci95": [
+      43.5316,
+      60.4443
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 60.5054,
+     "ci95": [
+      49.7379,
+      71.6024
+     ],
+     "n": 7000
+    }
+   },
+   "C-none": {
+    "wrist_depth_mm": {
+     "value": 37.7378,
+     "ci95": [
+      31.3385,
+      44.0267
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.2882,
+     "ci95": [
+      0.1249,
+      0.4237
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -15.2769,
+     "ci95": [
+      -24.9976,
+      -6.0374
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 37.7503,
+     "ci95": [
+      31.8249,
+      46.7236
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 42.923,
+     "ci95": [
+      37.6616,
+      48.3737
+     ],
+     "n": 7000
+    }
+   },
+   "C-proxy": {
+    "wrist_depth_mm": {
+     "value": 29.1075,
+     "ci95": [
+      24.4039,
+      35.6986
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.451,
+     "ci95": [
+      0.2596,
+      0.5781
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -23.9073,
+     "ci95": [
+      -34.5955,
+      -12.3837
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 31.3724,
+     "ci95": [
+      24.8563,
+      40.8316
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 32.0503,
+     "ci95": [
+      27.0593,
+      37.7132
+     ],
+     "n": 7000
+    }
+   },
+   "C-learned": {
+    "wrist_depth_mm": {
+     "value": 28.7242,
+     "ci95": [
+      23.9405,
+      36.1035
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.4582,
+     "ci95": [
+      0.253,
+      0.589
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -24.2905,
+     "ci95": [
+      -35.2765,
+      -11.8898
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 33.8259,
+     "ci95": [
+      27.1446,
+      39.8131
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 33.0564,
+     "ci95": [
+      27.8516,
+      37.8563
+     ],
+     "n": 7000
+    }
+   },
+   "C-oracle": {
+    "wrist_depth_mm": {
+     "value": 19.3065,
+     "ci95": [
+      16.411,
+      21.9454
+     ],
+     "n": 7000
+    },
+    "wrist_depth_reduction": {
+     "value": 0.6358,
+     "ci95": [
+      0.5336,
+      0.7129
+     ],
+     "n": 7000
+    },
+    "wrist_depth_change_mm": {
+     "value": -33.7082,
+     "ci95": [
+      -43.1169,
+      -24.6099
+     ],
+     "n": 7000
+    },
+    "visible_tip_mm": {
+     "value": 22.7956,
+     "ci95": [
+      19.1801,
+      28.5659
+     ],
+     "n": 7000
+    },
+    "occluded_tip_mm": {
+     "value": 24.252,
+     "ci95": [
+      21.3795,
+      28.617
+     ],
+     "n": 7000
+    }
+   },
+   "learned_minus_proxy_reduction": {
+    "value": 0.0072,
+    "ci95": [
+     -0.0258,
+     0.0325
+    ],
+    "n": 7000
+   }
+  },
+  "stage_b": {
+   "B2": {
+    "wrist_depth_mm": {
+     "value": 14.8262,
+     "ci95": [
+      10.5436,
+      20.0708
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 16.4182,
+     "ci95": [
+      12.494,
+      20.0192
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 19.8071,
+     "ci95": [
+      15.7053,
+      23.1684
+     ],
+     "n": 2280
+    }
+   },
+   "C-none": {
+    "wrist_depth_mm": {
+     "value": 10.552,
+     "ci95": [
+      9.2007,
+      14.0265
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.2883,
+     "ci95": [
+      -0.1288,
+      0.4987
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -4.2742,
+     "ci95": [
+      -9.7307,
+      1.4039
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 14.0578,
+     "ci95": [
+      12.2729,
+      16.1307
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 19.1948,
+     "ci95": [
+      15.8422,
+      23.6088
+     ],
+     "n": 2280
+    }
+   },
+   "C-proxy": {
+    "wrist_depth_mm": {
+     "value": 8.8363,
+     "ci95": [
+      7.0733,
+      13.3142
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.404,
+     "ci95": [
+      0.054,
+      0.5953
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -5.9899,
+     "ci95": [
+      -11.5037,
+      -0.7196
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 11.835,
+     "ci95": [
+      10.4397,
+      14.2052
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 15.9459,
+     "ci95": [
+      13.0261,
+      22.2391
+     ],
+     "n": 2280
+    }
+   },
+   "C-learned": {
+    "wrist_depth_mm": {
+     "value": 7.9167,
+     "ci95": [
+      6.408,
+      10.6061
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.466,
+     "ci95": [
+      0.1968,
+      0.617
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -6.9094,
+     "ci95": [
+      -11.8067,
+      -2.2397
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 10.6381,
+     "ci95": [
+      8.7451,
+      12.6894
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 15.6799,
+     "ci95": [
+      13.2758,
+      19.2554
+     ],
+     "n": 2280
+    }
+   },
+   "C-oracle": {
+    "wrist_depth_mm": {
+     "value": 6.584,
+     "ci95": [
+      4.8961,
+      8.7856
+     ],
+     "n": 2280
+    },
+    "wrist_depth_reduction": {
+     "value": 0.5559,
+     "ci95": [
+      0.3189,
+      0.7199
+     ],
+     "n": 2280
+    },
+    "wrist_depth_change_mm": {
+     "value": -8.2422,
+     "ci95": [
+      -14.0806,
+      -3.7111
+     ],
+     "n": 2280
+    },
+    "visible_tip_mm": {
+     "value": 9.5587,
+     "ci95": [
+      7.6996,
+      11.6016
+     ],
+     "n": 2280
+    },
+    "occluded_tip_mm": {
+     "value": 13.3428,
+     "ci95": [
+      10.183,
+      17.9604
+     ],
+     "n": 2280
+    }
+   },
+   "learned_minus_proxy_reduction": {
+    "value": 0.062,
+    "ci95": [
+     -0.0448,
+     0.2584
+    ],
+    "n": 2280
+   }
+  }
+ }
+}

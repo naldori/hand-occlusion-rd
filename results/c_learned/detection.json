@@ -1,0 +1,356 @@
+{
+ "stage_b_hocap": {
+  "B1|object": {
+   "n": 4251,
+   "n_large": 1722,
+   "tip_err_median_mm": 13.4,
+   "S_geo_learned": {
+    "auroc": 0.6259,
+    "ci95": [
+     0.5857,
+     0.6643
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.599,
+    "ci95": [
+     0.5586,
+     0.6413
+    ]
+   }
+  },
+  "B1|visible": {
+   "n": 2000,
+   "n_large": 678,
+   "tip_err_median_mm": 12.15,
+   "S_geo_learned": {
+    "auroc": 0.608,
+    "ci95": [
+     0.5487,
+     0.6831
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6245,
+    "ci95": [
+     0.5871,
+     0.6687
+    ]
+   }
+  },
+  "B1|self": {
+   "n": 749,
+   "n_large": 252,
+   "tip_err_median_mm": 12.01,
+   "S_geo_learned": {
+    "auroc": 0.6114,
+    "ci95": [
+     0.5536,
+     0.6869
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.5725,
+    "ci95": [
+     0.4959,
+     0.7005
+    ]
+   }
+  },
+  "B2|object": {
+   "n": 4251,
+   "n_large": 3997,
+   "tip_err_median_mm": 60.51,
+   "S_geo_learned": {
+    "auroc": 0.8425,
+    "ci95": [
+     0.808,
+     0.8768
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.7153,
+    "ci95": [
+     0.6537,
+     0.7803
+    ]
+   }
+  },
+  "B2|visible": {
+   "n": 2000,
+   "n_large": 1784,
+   "tip_err_median_mm": 52.23,
+   "S_geo_learned": {
+    "auroc": 0.7015,
+    "ci95": [
+     0.633,
+     0.7833
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6958,
+    "ci95": [
+     0.6534,
+     0.7448
+    ]
+   }
+  },
+  "B2|self": {
+   "n": 749,
+   "n_large": 685,
+   "tip_err_median_mm": 49.56,
+   "S_geo_learned": {
+    "auroc": 0.6937,
+    "ci95": [
+     0.6372,
+     0.7719
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.5625,
+    "ci95": [
+     0.4867,
+     0.6757
+    ]
+   }
+  },
+  "C-learned|object": {
+   "n": 4251,
+   "n_large": 3706,
+   "tip_err_median_mm": 34.7,
+   "S_geo_learned": {
+    "auroc": 0.6538,
+    "ci95": [
+     0.6212,
+     0.6919
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6794,
+    "ci95": [
+     0.6418,
+     0.712
+    ]
+   }
+  },
+  "C-learned|visible": {
+   "n": 2000,
+   "n_large": 1727,
+   "tip_err_median_mm": 39.71,
+   "S_geo_learned": {
+    "auroc": 0.6595,
+    "ci95": [
+     0.598,
+     0.7354
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.5607,
+    "ci95": [
+     0.4888,
+     0.6507
+    ]
+   }
+  },
+  "C-learned|self": {
+   "n": 749,
+   "n_large": 676,
+   "tip_err_median_mm": 37.76,
+   "S_geo_learned": {
+    "auroc": 0.5828,
+    "ci95": [
+     0.48,
+     0.6993
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.521,
+    "ci95": [
+     0.3987,
+     0.6174
+    ]
+   }
+  },
+  "criterion3_learned_contact_rescues_detection": {
+   "met": true,
+   "note": "post-hoc re-test of H1 with a score that uses no GT information"
+  }
+ },
+ "stage_b": {
+  "B1|object": {
+   "n": 975,
+   "n_large": 139,
+   "tip_err_median_mm": 7.43,
+   "S_geo_learned": {
+    "auroc": 0.6906,
+    "ci95": [
+     0.4862,
+     0.7989
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.5692,
+    "ci95": [
+     0.3357,
+     0.6885
+    ]
+   }
+  },
+  "B1|visible": {
+   "n": 884,
+   "n_large": 51,
+   "tip_err_median_mm": 5.6,
+   "S_geo_learned": {
+    "auroc": 0.6684,
+    "ci95": [
+     0.291,
+     0.9311
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6266,
+    "ci95": [
+     0.1761,
+     0.6626
+    ]
+   }
+  },
+  "B1|self": {
+   "n": 421,
+   "n_large": 67,
+   "tip_err_median_mm": 7.19,
+   "S_geo_learned": {
+    "auroc": 0.6227,
+    "ci95": [
+     0.2865,
+     0.8801
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.4379,
+    "ci95": [
+     0.2805,
+     0.6837
+    ]
+   }
+  },
+  "B2|object": {
+   "n": 975,
+   "n_large": 640,
+   "tip_err_median_mm": 19.81,
+   "S_geo_learned": {
+    "auroc": 0.683,
+    "ci95": [
+     0.5827,
+     0.7698
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6544,
+    "ci95": [
+     0.5442,
+     0.7573
+    ]
+   }
+  },
+  "B2|visible": {
+   "n": 884,
+   "n_large": 480,
+   "tip_err_median_mm": 16.42,
+   "S_geo_learned": {
+    "auroc": 0.7047,
+    "ci95": [
+     0.6371,
+     0.7714
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.635,
+    "ci95": [
+     0.5063,
+     0.7555
+    ]
+   }
+  },
+  "B2|self": {
+   "n": 421,
+   "n_large": 247,
+   "tip_err_median_mm": 17.97,
+   "S_geo_learned": {
+    "auroc": 0.6867,
+    "ci95": [
+     0.6064,
+     0.7476
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.5691,
+    "ci95": [
+     0.4475,
+     0.7245
+    ]
+   }
+  },
+  "C-learned|object": {
+   "n": 975,
+   "n_large": 690,
+   "tip_err_median_mm": 20.97,
+   "S_geo_learned": {
+    "auroc": 0.6114,
+    "ci95": [
+     0.5212,
+     0.6785
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6271,
+    "ci95": [
+     0.4809,
+     0.7295
+    ]
+   }
+  },
+  "C-learned|visible": {
+   "n": 884,
+   "n_large": 465,
+   "tip_err_median_mm": 15.73,
+   "S_geo_learned": {
+    "auroc": 0.5744,
+    "ci95": [
+     0.4813,
+     0.6747
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.6322,
+    "ci95": [
+     0.5497,
+     0.7267
+    ]
+   }
+  },
+  "C-learned|self": {
+   "n": 421,
+   "n_large": 269,
+   "tip_err_median_mm": 18.34,
+   "S_geo_learned": {
+    "auroc": 0.5645,
+    "ci95": [
+     0.4631,
+     0.6772
+    ]
+   },
+   "S_geo_oracle": {
+    "auroc": 0.5644,
+    "ci95": [
+     0.4646,
+     0.6805
+    ]
+   }
+  },
+  "criterion3_learned_contact_rescues_detection": {
+   "met": false,
+   "note": "post-hoc re-test of H1 with a score that uses no GT information"
+  }
+ }
+}

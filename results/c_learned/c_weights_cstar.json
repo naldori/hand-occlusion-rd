@@ -1,0 +1,1 @@
+{"chosen": {"proxy": {"wc": 0.1, "wp": 1.0}, "learned": {"wc": 0.1, "wp": 1.0}}, "note": "post-hoc C* weights of C-proxy, applied unchanged to C-learned"}

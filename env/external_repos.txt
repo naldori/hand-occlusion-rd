@@ -1,3 +1,4 @@
 Hamba 3aa7077d48d6b6ca25129ed7ad6aabff7ab817a3 https://github.com/humansensinglab/Hamba
 WiLoR fcb911312a38fa8badd30d9656a167485d61b8f9 https://github.com/rolpotamias/WiLoR.git
 VMamba 2ed52ead062a51a64521ed3871d52914bf532876 https://github.com/MzeroMiko/VMamba.git  (kernels/selective_scan built for sm_89)
+HACO c774211b968bdf836f9511dbd5ff23bb19fe1c44 https://github.com/dqj5182/HACO_RELEASE.git  (checkpoint: HF dqj5182/haco-checkpoints NeurIPS2025/haco_neurips_hamer_checkpoint.ckpt; demo base_data: HF dqj5182/haco-data)

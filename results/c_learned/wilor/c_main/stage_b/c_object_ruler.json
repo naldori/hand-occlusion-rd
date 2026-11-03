@@ -1,0 +1,197 @@
+{
+ "proxy": {
+  "weights": {
+   "wc": 10.0,
+   "wp": 1.0
+  },
+  "wrist_depth_b2_mm": {
+   "value": 10.9511,
+   "ci95": [
+    8.9245,
+    12.8572
+   ],
+   "n": 456
+  },
+  "wrist_depth_c_mm": {
+   "value": 12.8731,
+   "ci95": [
+    10.849,
+    17.8908
+   ],
+   "n": 456
+  },
+  "wrist_depth_change_mm": {
+   "value": 1.922,
+   "ci95": [
+    -0.201,
+    6.3085
+   ],
+   "n": 456
+  },
+  "wrist_depth_reduction": {
+   "value": -0.1755,
+   "ci95": [
+    -0.5673,
+    0.0165
+   ],
+   "n": 456
+  },
+  "translation_shift_mm_median": {
+   "value": 21.6627,
+   "ci95": [
+    15.1472,
+    29.1713
+   ],
+   "n": 456
+  },
+  "visible_tip_b2_mm": {
+   "value": 13.6206,
+   "ci95": [
+    11.8001,
+    17.2646
+   ],
+   "n": 884
+  },
+  "visible_tip_c_mm": {
+   "value": 21.0341,
+   "ci95": [
+    15.272,
+    26.0014
+   ],
+   "n": 884
+  },
+  "visible_tip_change_mm": {
+   "value": 7.4135,
+   "ci95": [
+    1.2466,
+    10.8355
+   ],
+   "n": 884
+  },
+  "object_tip_b2_mm": {
+   "value": 17.2129,
+   "ci95": [
+    13.0471,
+    23.0368
+   ],
+   "n": 975
+  },
+  "object_tip_c_mm": {
+   "value": 24.8158,
+   "ci95": [
+    19.7341,
+    28.3723
+   ],
+   "n": 975
+  },
+  "object_tip_change_mm": {
+   "value": 7.6028,
+   "ci95": [
+    2.1422,
+    10.3152
+   ],
+   "n": 975
+  }
+ },
+ "learned": {
+  "weights": {
+   "wc": 10.0,
+   "wp": 1.0
+  },
+  "wrist_depth_b2_mm": {
+   "value": 10.9511,
+   "ci95": [
+    8.9245,
+    12.8572
+   ],
+   "n": 456
+  },
+  "wrist_depth_c_mm": {
+   "value": 8.9575,
+   "ci95": [
+    6.9853,
+    11.5753
+   ],
+   "n": 456
+  },
+  "wrist_depth_change_mm": {
+   "value": -1.9936,
+   "ci95": [
+    -4.3816,
+    0.1425
+   ],
+   "n": 456
+  },
+  "wrist_depth_reduction": {
+   "value": 0.182,
+   "ci95": [
+    -0.0137,
+    0.3672
+   ],
+   "n": 456
+  },
+  "translation_shift_mm_median": {
+   "value": 21.6186,
+   "ci95": [
+    16.9961,
+    28.2666
+   ],
+   "n": 456
+  },
+  "visible_tip_b2_mm": {
+   "value": 13.6206,
+   "ci95": [
+    11.8001,
+    17.2646
+   ],
+   "n": 884
+  },
+  "visible_tip_c_mm": {
+   "value": 16.5179,
+   "ci95": [
+    12.0833,
+    23.8919
+   ],
+   "n": 884
+  },
+  "visible_tip_change_mm": {
+   "value": 2.8974,
+   "ci95": [
+    -2.3534,
+    8.9872
+   ],
+   "n": 884
+  },
+  "object_tip_b2_mm": {
+   "value": 17.2129,
+   "ci95": [
+    13.0471,
+    23.0368
+   ],
+   "n": 975
+  },
+  "object_tip_c_mm": {
+   "value": 21.5536,
+   "ci95": [
+    16.0723,
+    26.4807
+   ],
+   "n": 975
+  },
+  "object_tip_change_mm": {
+   "value": 4.3407,
+   "ci95": [
+    -2.8559,
+    8.7757
+   ],
+   "n": 975
+  }
+ },
+ "criterion_object_tells_depth": {
+  "per_variant": {
+   "proxy": false
+  },
+  "met": false,
+  "applies_to": "HO-Cap only (DexYCB reported for reference; weights tuned on DexYCB)"
+ }
+}
