@@ -1,0 +1,100 @@
+{
+ "n_images": 1400,
+ "corr_s_d": {
+  "value": 0.3563,
+  "ci95": [
+   0.2689,
+   0.4521
+  ],
+  "n": 1400
+ },
+ "slope_d_on_s": {
+  "value": 1.4953,
+  "ci95": [
+   1.1544,
+   1.9658
+  ],
+  "n": 1400
+ },
+ "s_median": {
+  "value": 0.0651,
+  "ci95": [
+   0.0596,
+   0.0685
+  ],
+  "n": 1400
+ },
+ "d_median": {
+  "value": 0.0603,
+  "ci95": [
+   0.0488,
+   0.0706
+  ],
+  "n": 1400
+ },
+ "depth_err_b2_mm_median": {
+  "value": 53.0147,
+  "ci95": [
+   45.3958,
+   61.3175
+  ],
+  "n": 1400
+ },
+ "depth_err_true_size_mm_median": {
+  "value": 32.249,
+  "ci95": [
+   24.1939,
+   37.5662
+  ],
+  "n": 1400
+ },
+ "depth_err_reduction_true_size": {
+  "value": 0.3917,
+  "ci95": [
+   0.2389,
+   0.5554
+  ],
+  "n": 1400
+ },
+ "tip_err_b2_mm_median": {
+  "value": 57.1971,
+  "ci95": [
+   47.4699,
+   66.186
+  ],
+  "n": 1400
+ },
+ "tip_err_true_size_mm_median": {
+  "value": 38.2843,
+  "ci95": [
+   32.0142,
+   43.9165
+  ],
+  "n": 1400
+ },
+ "tip_err_reduction_true_size": {
+  "value": 0.3307,
+  "ci95": [
+   0.1207,
+   0.4845
+  ],
+  "n": 1400
+ },
+ "depth_err_hamba_focal_mm_median": {
+  "value": 29134.076,
+  "ci95": [
+   28519.9993,
+   29772.4596
+  ],
+  "n": 1400
+ },
+ "criterion_hand_size_main_cause": {
+  "corr": 0.3563,
+  "slope_ci": [
+   1.1544,
+   1.9658
+  ],
+  "depth_reduction": 0.3917,
+  "met": false
+ }
+}

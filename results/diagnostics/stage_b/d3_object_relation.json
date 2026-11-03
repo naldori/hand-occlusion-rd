@@ -1,0 +1,194 @@
+{
+ "b1|object|large|pred_floating_gt5mm": {
+  "value": 0.741,
+  "ci95": [
+   0.4416,
+   0.8485
+  ],
+  "n": 139
+ },
+ "b1|object|large|pred_near_surface_pm5mm": {
+  "value": 0.1079,
+  "ci95": [
+   0.0494,
+   0.2459
+  ],
+  "n": 139
+ },
+ "b1|object|large|pred_penetrating_lt_m5mm": {
+  "value": 0.1511,
+  "ci95": [
+   0.0571,
+   0.3881
+  ],
+  "n": 139
+ },
+ "b1|object|large|gt_near_surface_pm5mm": {
+  "value": 0.223,
+  "ci95": [
+   0.119,
+   0.3881
+  ],
+  "n": 139
+ },
+ "b1|object|large|sd_pred_mm_median": {
+  "value": 19.2896,
+  "ci95": [
+   1.4037,
+   22.5447
+  ],
+  "n": 139
+ },
+ "b1|object|large|sd_gt_mm_median": {
+  "value": 8.8485,
+  "ci95": [
+   4.3023,
+   12.6825
+  ],
+  "n": 139
+ },
+ "b1|visible|large|palm_tip_pred_minus_gt_mm_median": {
+  "value": 2.4895,
+  "ci95": [
+   1.9044,
+   15.4304
+  ],
+  "n": 51
+ },
+ "b1|visible|small|palm_tip_pred_minus_gt_mm_median": {
+  "value": 0.8094,
+  "ci95": [
+   0.2613,
+   1.7013
+  ],
+  "n": 833
+ },
+ "b1|object|large|palm_tip_pred_minus_gt_mm_median": {
+  "value": 8.4433,
+  "ci95": [
+   -0.2977,
+   16.0851
+  ],
+  "n": 139
+ },
+ "b1|object|small|palm_tip_pred_minus_gt_mm_median": {
+  "value": 1.4044,
+  "ci95": [
+   0.4795,
+   2.5672
+  ],
+  "n": 836
+ },
+ "b1|self|large|palm_tip_pred_minus_gt_mm_median": {
+  "value": 6.189,
+  "ci95": [
+   -10.4478,
+   14.0311
+  ],
+  "n": 67
+ },
+ "b1|self|small|palm_tip_pred_minus_gt_mm_median": {
+  "value": 1.673,
+  "ci95": [
+   0.448,
+   2.8992
+  ],
+  "n": 354
+ },
+ "b2|object|large|pred_floating_gt5mm": {
+  "value": 0.7625,
+  "ci95": [
+   0.6405,
+   0.8423
+  ],
+  "n": 640
+ },
+ "b2|object|large|pred_near_surface_pm5mm": {
+  "value": 0.1375,
+  "ci95": [
+   0.0889,
+   0.2228
+  ],
+  "n": 640
+ },
+ "b2|object|large|pred_penetrating_lt_m5mm": {
+  "value": 0.1,
+  "ci95": [
+   0.0458,
+   0.1525
+  ],
+  "n": 640
+ },
+ "b2|object|large|gt_near_surface_pm5mm": {
+  "value": 0.4437,
+  "ci95": [
+   0.245,
+   0.6299
+  ],
+  "n": 640
+ },
+ "b2|object|large|sd_pred_mm_median": {
+  "value": 15.1701,
+  "ci95": [
+   10.8156,
+   20.8629
+  ],
+  "n": 640
+ },
+ "b2|object|large|sd_gt_mm_median": {
+  "value": 4.8141,
+  "ci95": [
+   2.47,
+   9.3825
+  ],
+  "n": 640
+ },
+ "b2|visible|large|palm_tip_pred_minus_gt_mm_median": {
+  "value": 0.89,
+  "ci95": [
+   0.3233,
+   1.8467
+  ],
+  "n": 480
+ },
+ "b2|visible|small|palm_tip_pred_minus_gt_mm_median": {
+  "value": 0.8149,
+  "ci95": [
+   0.2619,
+   1.7327
+  ],
+  "n": 404
+ },
+ "b2|object|large|palm_tip_pred_minus_gt_mm_median": {
+  "value": 2.0635,
+  "ci95": [
+   0.7908,
+   4.9815
+  ],
+  "n": 640
+ },
+ "b2|object|small|palm_tip_pred_minus_gt_mm_median": {
+  "value": 1.3329,
+  "ci95": [
+   0.3649,
+   2.4194
+  ],
+  "n": 335
+ },
+ "b2|self|large|palm_tip_pred_minus_gt_mm_median": {
+  "value": 2.0057,
+  "ci95": [
+   -0.1622,
+   4.437
+  ],
+  "n": 247
+ },
+ "b2|self|small|palm_tip_pred_minus_gt_mm_median": {
+  "value": 1.3181,
+  "ci95": [
+   -0.2255,
+   2.6521
+  ],
+  "n": 174
+ }
+}

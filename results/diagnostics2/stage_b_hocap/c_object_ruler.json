@@ -1,0 +1,292 @@
+{
+ "none": {
+  "weights": {
+   "wc": 10.0,
+   "wp": 1.0
+  },
+  "wrist_depth_b2_mm": {
+   "value": 53.0147,
+   "ci95": [
+    45.3958,
+    61.3175
+   ],
+   "n": 1400
+  },
+  "wrist_depth_c_mm": {
+   "value": 44.5536,
+   "ci95": [
+    37.383,
+    49.9146
+   ],
+   "n": 1400
+  },
+  "wrist_depth_change_mm": {
+   "value": -8.4612,
+   "ci95": [
+    -19.9069,
+    0.0297
+   ],
+   "n": 1400
+  },
+  "wrist_depth_reduction": {
+   "value": 0.1596,
+   "ci95": [
+    -0.0006,
+    0.3358
+   ],
+   "n": 1400
+  },
+  "translation_shift_mm_median": {
+   "value": 36.1998,
+   "ci95": [
+    31.5479,
+    39.8325
+   ],
+   "n": 1400
+  },
+  "visible_tip_b2_mm": {
+   "value": 52.2292,
+   "ci95": [
+    43.5316,
+    60.4443
+   ],
+   "n": 2000
+  },
+  "visible_tip_c_mm": {
+   "value": 46.4455,
+   "ci95": [
+    42.0816,
+    54.0604
+   ],
+   "n": 2000
+  },
+  "visible_tip_change_mm": {
+   "value": -5.7837,
+   "ci95": [
+    -15.0193,
+    5.6835
+   ],
+   "n": 2000
+  },
+  "object_tip_b2_mm": {
+   "value": 60.5054,
+   "ci95": [
+    49.7379,
+    71.6024
+   ],
+   "n": 4251
+  },
+  "object_tip_c_mm": {
+   "value": 50.9059,
+   "ci95": [
+    46.0279,
+    56.3647
+   ],
+   "n": 4251
+  },
+  "object_tip_change_mm": {
+   "value": -9.5995,
+   "ci95": [
+    -22.4325,
+    2.5515
+   ],
+   "n": 4251
+  }
+ },
+ "proxy": {
+  "weights": {
+   "wc": 10.0,
+   "wp": 1.0
+  },
+  "wrist_depth_b2_mm": {
+   "value": 53.0147,
+   "ci95": [
+    45.3958,
+    61.3175
+   ],
+   "n": 1400
+  },
+  "wrist_depth_c_mm": {
+   "value": 23.0178,
+   "ci95": [
+    19.4888,
+    27.9511
+   ],
+   "n": 1400
+  },
+  "wrist_depth_change_mm": {
+   "value": -29.9969,
+   "ci95": [
+    -39.6616,
+    -20.3143
+   ],
+   "n": 1400
+  },
+  "wrist_depth_reduction": {
+   "value": 0.5658,
+   "ci95": [
+    0.4342,
+    0.6596
+   ],
+   "n": 1400
+  },
+  "translation_shift_mm_median": {
+   "value": 52.8865,
+   "ci95": [
+    46.212,
+    60.1226
+   ],
+   "n": 1400
+  },
+  "visible_tip_b2_mm": {
+   "value": 52.2292,
+   "ci95": [
+    43.5316,
+    60.4443
+   ],
+   "n": 2000
+  },
+  "visible_tip_c_mm": {
+   "value": 34.4097,
+   "ci95": [
+    30.1862,
+    40.6286
+   ],
+   "n": 2000
+  },
+  "visible_tip_change_mm": {
+   "value": -17.8195,
+   "ci95": [
+    -27.5776,
+    -6.0749
+   ],
+   "n": 2000
+  },
+  "object_tip_b2_mm": {
+   "value": 60.5054,
+   "ci95": [
+    49.7379,
+    71.6024
+   ],
+   "n": 4251
+  },
+  "object_tip_c_mm": {
+   "value": 34.8508,
+   "ci95": [
+    29.3093,
+    40.701
+   ],
+   "n": 4251
+  },
+  "object_tip_change_mm": {
+   "value": -25.6546,
+   "ci95": [
+    -40.0892,
+    -10.8342
+   ],
+   "n": 4251
+  }
+ },
+ "oracle": {
+  "weights": {
+   "wc": 10.0,
+   "wp": 1.0
+  },
+  "wrist_depth_b2_mm": {
+   "value": 53.0147,
+   "ci95": [
+    45.3958,
+    61.3175
+   ],
+   "n": 1400
+  },
+  "wrist_depth_c_mm": {
+   "value": 23.8419,
+   "ci95": [
+    20.8794,
+    27.7167
+   ],
+   "n": 1400
+  },
+  "wrist_depth_change_mm": {
+   "value": -29.1728,
+   "ci95": [
+    -37.9445,
+    -20.4587
+   ],
+   "n": 1400
+  },
+  "wrist_depth_reduction": {
+   "value": 0.5503,
+   "ci95": [
+    0.4413,
+    0.6336
+   ],
+   "n": 1400
+  },
+  "translation_shift_mm_median": {
+   "value": 49.9704,
+   "ci95": [
+    45.1085,
+    55.4322
+   ],
+   "n": 1400
+  },
+  "visible_tip_b2_mm": {
+   "value": 52.2292,
+   "ci95": [
+    43.5316,
+    60.4443
+   ],
+   "n": 2000
+  },
+  "visible_tip_c_mm": {
+   "value": 33.0996,
+   "ci95": [
+    28.22,
+    40.8834
+   ],
+   "n": 2000
+  },
+  "visible_tip_change_mm": {
+   "value": -19.1295,
+   "ci95": [
+    -29.1803,
+    -6.3647
+   ],
+   "n": 2000
+  },
+  "object_tip_b2_mm": {
+   "value": 60.5054,
+   "ci95": [
+    49.7379,
+    71.6024
+   ],
+   "n": 4251
+  },
+  "object_tip_c_mm": {
+   "value": 34.2582,
+   "ci95": [
+    28.9566,
+    39.6976
+   ],
+   "n": 4251
+  },
+  "object_tip_change_mm": {
+   "value": -26.2472,
+   "ci95": [
+    -41.0079,
+    -11.5207
+   ],
+   "n": 4251
+  }
+ },
+ "criterion_object_tells_depth": {
+  "per_variant": {
+   "none": false,
+   "proxy": true
+  },
+  "met": true,
+  "applies_to": "HO-Cap only (DexYCB reported for reference; weights tuned on DexYCB)"
+ }
+}

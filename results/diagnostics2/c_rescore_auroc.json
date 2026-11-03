@@ -1,0 +1,434 @@
+{
+ "stage_b_hocap|B2|object|all": {
+  "n_pos": 3997,
+  "S_geo": {
+   "auroc": 0.276,
+   "ci95": [
+    0.197,
+    0.37
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.715,
+   "ci95": [
+    0.654,
+    0.78
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|B2|object|contact": {
+  "n_pos": 3143,
+  "S_geo": {
+   "auroc": 0.287,
+   "ci95": [
+    0.19,
+    0.377
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.849,
+   "ci95": [
+    0.811,
+    0.889
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|B2|visible|all": {
+  "n_pos": 1784,
+  "S_geo": {
+   "auroc": 0.448,
+   "ci95": [
+    0.38,
+    0.509
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.696,
+   "ci95": [
+    0.653,
+    0.745
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|none|object|all": {
+  "n_pos": 3994,
+  "S_geo": {
+   "auroc": 0.279,
+   "ci95": [
+    0.246,
+    0.313
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.722,
+   "ci95": [
+    0.673,
+    0.771
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|none|object|contact": {
+  "n_pos": 3173,
+  "S_geo": {
+   "auroc": 0.271,
+   "ci95": [
+    0.245,
+    0.305
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.812,
+   "ci95": [
+    0.783,
+    0.846
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|none|visible|all": {
+  "n_pos": 1819,
+  "S_geo": {
+   "auroc": 0.422,
+   "ci95": [
+    0.312,
+    0.494
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.659,
+   "ci95": [
+    0.599,
+    0.734
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|proxy|object|all": {
+  "n_pos": 3672,
+  "S_geo": {
+   "auroc": 0.439,
+   "ci95": [
+    0.411,
+    0.467
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.658,
+   "ci95": [
+    0.621,
+    0.682
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|proxy|object|contact": {
+  "n_pos": 2928,
+  "S_geo": {
+   "auroc": 0.45,
+   "ci95": [
+    0.412,
+    0.491
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.678,
+   "ci95": [
+    0.641,
+    0.705
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|proxy|visible|all": {
+  "n_pos": 1692,
+  "S_geo": {
+   "auroc": 0.374,
+   "ci95": [
+    0.315,
+    0.435
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.603,
+   "ci95": [
+    0.528,
+    0.702
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|oracle|object|all": {
+  "n_pos": 3616,
+  "S_geo": {
+   "auroc": 0.442,
+   "ci95": [
+    0.402,
+    0.48
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.679,
+   "ci95": [
+    0.626,
+    0.724
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|oracle|object|contact": {
+  "n_pos": 2904,
+  "S_geo": {
+   "auroc": 0.48,
+   "ci95": [
+    0.434,
+    0.532
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.718,
+   "ci95": [
+    0.68,
+    0.752
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b_hocap|oracle|visible|all": {
+  "n_pos": 1667,
+  "S_geo": {
+   "auroc": 0.441,
+   "ci95": [
+    0.391,
+    0.495
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.563,
+   "ci95": [
+    0.491,
+    0.658
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|B2|object|all": {
+  "n_pos": 640,
+  "S_geo": {
+   "auroc": 0.398,
+   "ci95": [
+    0.337,
+    0.457
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.654,
+   "ci95": [
+    0.544,
+    0.757
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|B2|object|contact": {
+  "n_pos": 497,
+  "S_geo": {
+   "auroc": 0.412,
+   "ci95": [
+    0.362,
+    0.463
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.75,
+   "ci95": [
+    0.642,
+    0.833
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|B2|visible|all": {
+  "n_pos": 480,
+  "S_geo": {
+   "auroc": 0.421,
+   "ci95": [
+    0.358,
+    0.477
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.635,
+   "ci95": [
+    0.506,
+    0.756
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|none|object|all": {
+  "n_pos": 801,
+  "S_geo": {
+   "auroc": 0.433,
+   "ci95": [
+    0.303,
+    0.569
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.67,
+   "ci95": [
+    0.556,
+    0.769
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|none|object|contact": {
+  "n_pos": 643,
+  "S_geo": {
+   "auroc": 0.464,
+   "ci95": [
+    0.376,
+    0.568
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.739,
+   "ci95": [
+    0.676,
+    0.811
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|none|visible|all": {
+  "n_pos": 553,
+  "S_geo": {
+   "auroc": 0.439,
+   "ci95": [
+    0.337,
+    0.527
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.635,
+   "ci95": [
+    0.558,
+    0.717
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|proxy|object|all": {
+  "n_pos": 733,
+  "S_geo": {
+   "auroc": 0.543,
+   "ci95": [
+    0.481,
+    0.606
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.553,
+   "ci95": [
+    0.417,
+    0.662
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|proxy|object|contact": {
+  "n_pos": 577,
+  "S_geo": {
+   "auroc": 0.564,
+   "ci95": [
+    0.481,
+    0.628
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.587,
+   "ci95": [
+    0.475,
+    0.664
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|proxy|visible|all": {
+  "n_pos": 536,
+  "S_geo": {
+   "auroc": 0.425,
+   "ci95": [
+    0.343,
+    0.501
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.656,
+   "ci95": [
+    0.567,
+    0.745
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|oracle|object|all": {
+  "n_pos": 690,
+  "S_geo": {
+   "auroc": 0.53,
+   "ci95": [
+    0.413,
+    0.647
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.616,
+   "ci95": [
+    0.465,
+    0.731
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|oracle|object|contact": {
+  "n_pos": 559,
+  "S_geo": {
+   "auroc": 0.58,
+   "ci95": [
+    0.494,
+    0.666
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.645,
+   "ci95": [
+    0.527,
+    0.733
+   ]
+  },
+  "verdict": null
+ },
+ "stage_b|oracle|visible|all": {
+  "n_pos": 455,
+  "S_geo": {
+   "auroc": 0.529,
+   "ci95": [
+    0.459,
+    0.6
+   ]
+  },
+  "S_geo_oracle": {
+   "auroc": 0.605,
+   "ci95": [
+    0.493,
+    0.734
+   ]
+  },
+  "verdict": null
+ }
+}

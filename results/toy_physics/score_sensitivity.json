@@ -1,0 +1,15 @@
+{
+  "correct_grasp_median_N": 3.41,
+  "slide_5mm_median_ratio": 1.0,
+  "slide_5mm_max_ratio": 1.014,
+  "slide_10mm_median_ratio": 0.999,
+  "slide_10mm_max_ratio": 1.015,
+  "slide_20mm_median_ratio": 1.0,
+  "slide_20mm_max_ratio": 1.041,
+  "slide_40mm_median_ratio": 1.0,
+  "slide_40mm_max_ratio": 1.052,
+  "drop_0mm_median_ratio": 1.037,
+  "drop_0mm_max_ratio": 1.1,
+  "wrong_side_0mm_median_ratio": 0.663,
+  "wrong_side_0mm_max_ratio": 0.857
+}

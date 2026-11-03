@@ -1,0 +1,59 @@
+{
+  "fingers=1,Fmax=15.0": {
+    "correct_feasible_dirs": 100,
+    "slide10": 1.0,
+    "slide30": 1.0,
+    "drop": 1.0,
+    "wrong_side": 1.0
+  },
+  "fingers=1,Fmax=5.0": {
+    "correct_feasible_dirs": 100,
+    "slide10": 1.0,
+    "slide30": 1.0,
+    "drop": 1.0,
+    "wrong_side": 1.0
+  },
+  "fingers=1,Fmax=3.0": "correct grasp infeasible",
+  "fingers=2,Fmax=15.0": {
+    "correct_feasible_dirs": 100,
+    "slide10": 0.0,
+    "slide30": 0.16,
+    "drop": 1.0,
+    "wrong_side": 0.12
+  },
+  "fingers=2,Fmax=5.0": {
+    "correct_feasible_dirs": 100,
+    "slide10": 0.14,
+    "slide30": 0.43,
+    "drop": 1.0,
+    "wrong_side": 0.64
+  },
+  "fingers=2,Fmax=3.0": {
+    "correct_feasible_dirs": 35,
+    "slide10": 0.19,
+    "slide30": 0.66,
+    "drop": 1.0,
+    "wrong_side": 1.0
+  },
+  "fingers=4,Fmax=15.0": {
+    "correct_feasible_dirs": 100,
+    "slide10": 0.0,
+    "slide30": 0.0,
+    "drop": 0.0,
+    "wrong_side": 0.0
+  },
+  "fingers=4,Fmax=5.0": {
+    "correct_feasible_dirs": 100,
+    "slide10": 0.0,
+    "slide30": 0.01,
+    "drop": 0.07,
+    "wrong_side": 0.0
+  },
+  "fingers=4,Fmax=3.0": {
+    "correct_feasible_dirs": 37,
+    "slide10": 0.03,
+    "slide30": 0.04,
+    "drop": 0.08,
+    "wrong_side": 0.0
+  }
+}

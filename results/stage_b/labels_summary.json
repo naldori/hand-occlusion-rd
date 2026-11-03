@@ -1,0 +1,15 @@
+{
+  "n_images": 456,
+  "n_fingers": 2280,
+  "occlusion_counts": {
+    "visible": 884,
+    "object": 975,
+    "self": 421
+  },
+  "object_occ_vs_seg_agreement_per_joint": 0.946,
+  "gt_contact_rate": {
+    "2": 0.618,
+    "3": 0.653,
+    "5": 0.716
+  }
+}

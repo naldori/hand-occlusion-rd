@@ -1,0 +1,142 @@
+{
+ "A1_gt_contact_fingers_gt_floating_rate": {
+  "value": 0.5108,
+  "ci95": [
+   0.3214,
+   0.7106
+  ],
+  "n": 1488
+ },
+ "A1_group_pred_floating_rate": {
+  "value": 0.741,
+  "ci95": [
+   0.4416,
+   0.8485
+  ],
+  "n": 139
+ },
+ "A1_group_gt_floating_rate_baseline": {
+  "value": 0.7122,
+  "ci95": [
+   0.4225,
+   0.8235
+  ],
+  "n": 139
+ },
+ "A1_group_pred_minus_baseline": {
+  "value": 0.0288,
+  "ci95": [
+   -0.1304,
+   0.1429
+  ],
+  "n": 139
+ },
+ "A2_group_hand_size_ratio_median": {
+  "value": 1.0051,
+  "ci95": [
+   0.9992,
+   1.0082
+  ],
+  "n": 139
+ },
+ "A2_group_bone0_ratio_median": {
+  "value": 1.0051,
+  "ci95": [
+   0.9987,
+   1.008
+  ],
+  "n": 139
+ },
+ "A2_group_bone1_ratio_median": {
+  "value": 1.0101,
+  "ci95": [
+   1.0043,
+   1.0133
+  ],
+  "n": 139
+ },
+ "A2_group_bone2_ratio_median": {
+  "value": 1.0072,
+  "ci95": [
+   1.0014,
+   1.012
+  ],
+  "n": 139
+ },
+ "A2_group_bone3_ratio_median": {
+  "value": 1.0759,
+  "ci95": [
+   1.0006,
+   1.0826
+  ],
+  "n": 139
+ },
+ "A2_group_length_displacement_mm_median": {
+  "value": 1.8951,
+  "ci95": [
+   1.1716,
+   2.2029
+  ],
+  "n": 139
+ },
+ "A2_group_tip_error_mm_median": {
+  "value": 20.6436,
+  "ci95": [
+   16.9733,
+   31.9496
+  ],
+  "n": 139
+ },
+ "A2_group_length_share": {
+  "value": 0.0918,
+  "ci95": [
+   0.0655,
+   0.1114
+  ],
+  "n": 139
+ },
+ "A3_group_partial_R2_flexion": {
+  "value": 0.5969,
+  "ci95": [
+   0.0002,
+   0.6587
+  ],
+  "n": 139
+ },
+ "A3_group_partial_R2_abduction_twist": {
+  "value": 0.047,
+  "ci95": [
+   0.0066,
+   0.1349
+  ],
+  "n": 139
+ },
+ "A3_group_median_abs_err_deg": {
+  "flex_err": 22.87155165424646,
+  "abd_err": 3.0913915606945466,
+  "twist_err": 9.069412798830854
+ },
+ "A3_n_twist_undefined_straight_fingers_all_rows": 299,
+ "A4_group_gt_contact_normal_frac_median": {
+  "value": 0.4835,
+  "ci95": [
+   0.3822,
+   0.7648
+  ],
+  "n": 88
+ },
+ "A4_group_gt_contact_normal_mm_median": {
+  "value": 0.0187,
+  "ci95": [
+   -10.9498,
+   6.3475
+  ],
+  "n": 88
+ },
+ "criteria": {
+  "annotation_noise": true,
+  "finger_length": false,
+  "abduction_twist": false,
+  "object_unaware": false
+ }
+}

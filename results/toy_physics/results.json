@@ -1,0 +1,43 @@
+{
+  "settings": {
+    "R": 0.035,
+    "H": 0.12,
+    "mass": 0.3,
+    "fmax": 15.0,
+    "mu": [
+      0.3,
+      0.5,
+      0.8
+    ],
+    "n_edges": 8,
+    "n_gravity_dirs": 200
+  },
+  "E1_ms_per_LP": 1.127,
+  "E2_feasible_rate_random_contacts": {
+    "mu=0.3,k=2": 0.0,
+    "mu=0.3,k=3": 0.028,
+    "mu=0.3,k=4": 0.194,
+    "mu=0.3,k=5": 0.502,
+    "mu=0.5,k=2": 0.0,
+    "mu=0.5,k=3": 0.162,
+    "mu=0.5,k=4": 0.54,
+    "mu=0.5,k=5": 0.708,
+    "mu=0.8,k=2": 0.0,
+    "mu=0.8,k=3": 0.457,
+    "mu=0.8,k=4": 0.784,
+    "mu=0.8,k=5": 0.827
+  },
+  "E3_feasible_rate_after_error_mu0.5": {
+    "baseline_feasible_rate": 1.0,
+    "slide_5mm": 1.0,
+    "slide_10mm": 1.0,
+    "slide_20mm": 1.0,
+    "slide_40mm": 1.0,
+    "lift_1mm": 1.0,
+    "lift_5mm": 1.0,
+    "lift_20mm": 1.0,
+    "drop_0mm": 1.0,
+    "wrong_side_0mm": 1.0,
+    "thumb_drop": 0.0
+  }
+}
